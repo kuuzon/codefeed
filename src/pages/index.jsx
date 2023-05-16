@@ -16,8 +16,8 @@ function HomePage(props) {
         />
       </Head>
       <HeroSection 
-        title={'Code'} 
-        description={'Catch up on all the coding news from around the globe, at the touch of a button'}
+        title='Code' 
+        description='Catch up on all the coding news from around the globe, at the touch of a button'
         bgImage="/backgrounds/hero-code.webp"
       />
       {articles.length > 0 && <ArticlesList articles={articles} />}
@@ -41,10 +41,3 @@ export const getStaticProps = async () => {
 };
 
 export default HomePage;
-
-/* TERMINOLOGY FOR CODEFEED
-NO USE OF "NEWS" AS IT CAN BE SINGULAR AND PLURAL = ANNOYING:
-
-- Plural: "Articles"
-- Singular: "Article"
-*/

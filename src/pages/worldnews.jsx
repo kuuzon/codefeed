@@ -16,8 +16,8 @@ function WorldNewsPage(props) {
         />
       </Head>
       <HeroSection 
-        title={'Globe'} 
-        description={'Catch up on all the global news via BBC News'}
+        title='Globe' 
+        description='Catch up on all the global news via BBC News'
         bgImage="/backgrounds/hero-news.webp"
       />
       {worldArticles.length > 0 && <ArticlesList articles={worldArticles} />}
@@ -28,7 +28,7 @@ function WorldNewsPage(props) {
 // SERVER SIDE GENERATION (snippet: "ngss")
 export const getServerSideProps = async () => {
   // External API Request: NewsAPI (BBC News)
-  const response = await fetch(`https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`);
+  const response = await fetch(`https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${process.env.NEWS_API_KEY}`);
   const data = await response.json();
   const articles = data.articles;
 
