@@ -1,6 +1,7 @@
 import '@/styles/globals.css'
 import Layout from '@/components/layout'
 import { Fragment, useEffect } from 'react'
+import Head from 'next/head'
 // import Script from 'next/script'
 // import { useRouter } from 'next/router'
 // import * as ga from '../lib/google-analytics';
@@ -38,7 +39,9 @@ function App({ Component, pageProps }) {
           gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}');
         `}
       </Script> */}
-
+      <Head>
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </Head>
       <Layout>
         <Component {...pageProps} />
       </Layout>
