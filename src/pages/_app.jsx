@@ -40,7 +40,7 @@ function App({ Component, pageProps }) {
         `}
       </Script> */}
       <Head>
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/images/favicon.ico" />
       </Head>
       <Layout>
         <Component {...pageProps} />
