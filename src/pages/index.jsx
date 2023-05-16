@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import Head from 'next/head';
-import Hero from '../components/layout/Hero';
+import HeroSection from '@/components/layout/HeroSection/HeroSection';
 import ArticlesList from '@/components/feature/articles/ArticlesList/ArticleList';
 
 function HomePage(props) {
@@ -15,7 +15,7 @@ function HomePage(props) {
           description='Browse all the coding news of today from around the globe'
         />
       </Head>
-      <Hero 
+      <HeroSection 
         title={'Code'} 
         description={'Catch up on all the coding news from around the globe, at the touch of a button'}
         bgImage="/backgrounds/hero-code.webp"

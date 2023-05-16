@@ -3,7 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import { Lato } from 'next/font/google';
 
-const newsreader = Lato({
+const lato = Lato({
   subsets: ['latin'],
   weight: ['300','400', '700'],
   style: ['normal', 'italic']
@@ -11,7 +11,7 @@ const newsreader = Lato({
 
 function Layout(props) {
   return (
-    <div className={`${styles.app} ${newsreader.className}`}>
+    <div className={`${styles.app} ${lato.className}`}>
       <Header />
       <main className={styles.main}>
         {props.children}

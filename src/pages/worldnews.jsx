@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import Head from 'next/head';
-import Hero from '../components/layout/Hero';
+import HeroSection from '@/components/layout/HeroSection/HeroSection';
 import ArticlesList from '@/components/feature/articles/ArticlesList/ArticleList';
 
 function WorldNewsPage(props) {
@@ -15,7 +15,7 @@ function WorldNewsPage(props) {
           description='Browse all the global news of today via BBC News UK'
         />
       </Head>
-      <Hero 
+      <HeroSection 
         title={'Globe'} 
         description={'Catch up on all the global news via BBC News'}
         bgImage="/backgrounds/hero-news.webp"

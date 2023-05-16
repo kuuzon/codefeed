@@ -1,4 +1,4 @@
-import styles from './Hero.module.scss';
+import styles from './HeroSection.module.scss';
 
 
 function HeroSection({ title, description, bgImage }) {

@@ -30,7 +30,8 @@ module.exports = (phase) => {
       if (isDev) return 'http://localhost:3000/'
       if (isProd) return 'https://thecodefeed.vercel.app/'
     })(),
-    // GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID,
+    NEWS_API_KEY: process.env.NEWS_API_KEY,
+    GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID,
   }
 
   // Next.config is an object
