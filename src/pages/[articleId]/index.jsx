@@ -8,7 +8,7 @@ function ArticleDetailPage(props) {
   return (
     <Fragment>
       <Head>
-        <title>Code-Feed | {article.category}</title>
+        <title>{`CodeFeed | ${article.category}`}</title>
         <meta 
           name='description'
           description={article.title + ': ' + article.description}
@@ -26,7 +26,7 @@ function ArticleDetailPage(props) {
 
 // STATIC SITE DYNAMIC PATHS (snippet: "ngspa")
 export const getStaticPaths = async () => {
-  // (a) Fetches ENTIRE news array from INTERNAL API
+  // (a) Fetches ENTIRE articles array from INTERNAL API
   const response = await fetch(`${process.env.SERVER_NAME}/api/news`);
   const articles = await response.json();
 
@@ -47,14 +47,14 @@ export const getStaticPaths = async () => {
 
 // STATIC SITE GENERATION (snippet: "ngsp")
 export const getStaticProps = async ( context ) => {
-  // (a) Fetches ENTIRE news array from INTERNAL API
+  // (a) Fetches ENTIRE articles array from INTERNAL API
   const response = await fetch(`${process.env.SERVER_NAME}/api/news`);
   const articles = await response.json();
   
   // (b) Store params id value (article USER wants!)
   const articleQuery = context.params.articleId;
 
-  // (c) Filters news array to match & return article passed in params
+  // (c) Filters articles array to match & return article passed in params
   const articleMatch = articles.filter(
     (article) => article.id.toString() === articleQuery 
   )

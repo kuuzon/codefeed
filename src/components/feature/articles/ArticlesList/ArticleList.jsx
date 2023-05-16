@@ -6,10 +6,10 @@ function ArticlesList(props) {
 
   return (
     <Container>
-      {articles.map((article) => (
+      {articles.map((article, index) => (
         <ArticleItem
-          key={article.id ? article.id : article.title}
-          id={article.id ? article.id : article.title}
+          key={article.id ? article.id : index}
+          id={article.id ? article.id : index}
           image={article.image}
           urlToImage={article.urlToImage}
           url={article.url}
