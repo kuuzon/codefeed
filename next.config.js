@@ -28,7 +28,7 @@ module.exports = (phase) => {
   const env = {
     SERVER_NAME: (() => {
       if (isDev) return 'http://localhost:3000/'
-      // if (isProd) return 'https://thecodefeed.vercel.app/'
+      if (isProd) return 'https://thecodefeed.vercel.app/'
     })(),
     // GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID,
   }
