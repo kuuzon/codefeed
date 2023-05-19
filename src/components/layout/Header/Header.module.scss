@@ -9,6 +9,7 @@
   background-color: $primaryColor;
   padding: 0 10%;
   position: fixed; // Header will follow user scroll
+  z-index: 1;
 
   .brand {
     font-size: 1.7rem;

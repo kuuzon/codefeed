@@ -34,8 +34,7 @@ export const getStaticProps = async () => {
   // Returned data as props & ISR functionality
   return {
     props: {
-      articles: data,
-      time: timeData
+      articles: data
     },
     revalidate: 60 * 60,
   };

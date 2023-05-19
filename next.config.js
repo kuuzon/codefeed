@@ -11,7 +11,7 @@ module.exports = (phase) => {
 
   const reactStrictMode = true;
 
-  // UNCONFIGURED HOST + REMOTE PATTERNS: https://nextjs.org/docs/pages/api-reference/components/image#remotepatterns
+  // UNCONFIGURED HOST & REMOTE PATTERNS
   const images = {
     remotePatterns: [
       {

@@ -12,8 +12,8 @@ function ArticleDetail(props) {
           <Image 
             src={props.image} 
             alt={props.title}
-            width={650}
-            height={500}
+            fill={true}
+            sizes="100vw"
             priority={true}
           />
         </div>
