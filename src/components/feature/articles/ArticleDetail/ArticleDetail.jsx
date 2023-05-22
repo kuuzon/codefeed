@@ -10,6 +10,7 @@ function ArticleDetail(props) {
       <div className={styles.articleMain}>
         <div className={styles.imageBox}>
           <Image 
+            className={styles.nextImage}
             src={props.image} 
             alt={props.title}
             fill={true}
