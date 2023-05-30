@@ -32,6 +32,11 @@ export const getServerSideProps = async () => {
   const data = await response.json();
   const articles = data.articles;
 
+  // ERROR HANDLING WITH SSR
+  if(!response.ok){
+    throw new Error(`Failed to fetch posts - Error ${response.status}: ${data.message}`)
+  }
+
   // Returned data as props
   return {
     props: {

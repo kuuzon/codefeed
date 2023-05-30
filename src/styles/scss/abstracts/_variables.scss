@@ -19,3 +19,17 @@ $codle-presentColor: rgb(181, 159, 59);
 
 // WORDLE/CODLE TYPOGRAPHY
 $codle-font: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+
+// MIXIN: Set text color dynamically
+@mixin setBackground($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+// FUNCTIONS
+@function set-text-color($color){
+  @if(lightness($color) > 70) { 
+    @return $complementaryColor; 
+  } @else {
+    @return $primaryColor;
+  }
+}
