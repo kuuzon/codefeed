@@ -13,7 +13,6 @@ function AusNewsPage({ ausArticles }) {
 
   // PAGINATION FUNCTION: Handle changing of page
   const handlePageChange = (page) => {
-    console.log(page);
     setCurrentPage(page);
     scrollToTop();
   }
@@ -27,7 +26,7 @@ function AusNewsPage({ ausArticles }) {
     console.log(listRef)
     targetNode.scrollIntoView({
       behavior: 'smooth',
-      block: 'nearest',
+      block: 'end',
       inline: 'center'
     });
   }

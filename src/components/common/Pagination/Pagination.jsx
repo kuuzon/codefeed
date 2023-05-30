@@ -7,7 +7,6 @@ const Pagination = ({ itemsCount, currentPage, pageSize, onPageChange }) => {
 
   // VALUE: Generate array of all page numbers needed
   const pages = lodash.range(1, pagesCount + 1);
-  console.log(pages);
 
   // CONDITIONAL LOAD: Items < items per page
   if(pagesCount === 1) return null;
