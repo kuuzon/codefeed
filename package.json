@@ -10,15 +10,15 @@
     "build:scss": "sass --no-source-map src/styles/scss/main.scss:src/styles/globals.css"
   },
   "dependencies": {
-    "eslint": "8.39.0",
-    "eslint-config-next": "13.3.4",
+    "eslint": "8.42.0",
+    "eslint-config-next": "13.4.4",
     "lodash": "^4.17.21",
-    "next": "13.3.4",
+    "next": "13.4.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.8.0"
+    "react-icons": "^4.9.0"
   },
   "devDependencies": {
-    "sass": "^1.62.1"
+    "sass": "^1.63.2"
   }
 }
