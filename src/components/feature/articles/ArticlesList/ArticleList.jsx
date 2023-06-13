@@ -8,8 +8,8 @@ function ArticlesList({ articles }) {
       <Container>
         {articles.map((article, index) => (
           <ArticleItem
-            key={article._id ? article._id : index}
-            id={article._id ? article._id : index}
+            key={article.id ? article.id : index}
+            id={article.id ? article.id : index}
             image={article.image}
             urlToImage={article.urlToImage}
             url={article.url}
