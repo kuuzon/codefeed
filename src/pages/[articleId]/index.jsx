@@ -24,14 +24,37 @@ function ArticleDetailPage(props) {
   );
 }
 
+// STATIC SITE GENERATION (snippet: "ngsp")
+export const getStaticProps = async ( context ) => {
+  // (a) Fetches ENTIRE articles array from INTERNAL API
+  const response = await fetch(`${process.env.SERVER_NAME}/api/articles`);
+  const articles = await response.json();
+  console.log(articles)
+
+  // (b) Store params id value (article USER wants!)
+  const articleQuery = context.params.articleId;
+
+  // (c) Filters articles array to match & return article passed in params
+  const articleMatch = articles.filter(
+    (article) => article._id.toString() === articleQuery 
+  )
+
+  return {
+    props: {
+      article: articleMatch[0]
+    },
+  };
+};
+
 // STATIC SITE DYNAMIC PATHS (snippet: "ngspa")
 export const getStaticPaths = async () => {
   // (a) Fetches ENTIRE articles array from INTERNAL API
-  const response = await fetch(`${process.env.SERVER_NAME}/api/news`);
+  const response = await fetch(`${process.env.SERVER_NAME}/api/articles`);
   const articles = await response.json();
 
   // (b) Pull ALL the ids out of the articles array ONLY
-  const idList = articles.map((news) => news.id);
+  const idList = articles.map((article) => article._id);
+  console.log(idList);
 
   // (c) Pre-build ALL the URL paths for all existing ids in array 
   const paths = idList.map((id) => (
@@ -44,26 +67,5 @@ export const getStaticPaths = async () => {
     fallback: false
   }
 }
-
-// STATIC SITE GENERATION (snippet: "ngsp")
-export const getStaticProps = async ( context ) => {
-  // (a) Fetches ENTIRE articles array from INTERNAL API
-  const response = await fetch(`${process.env.SERVER_NAME}/api/news`);
-  const articles = await response.json();
-  
-  // (b) Store params id value (article USER wants!)
-  const articleQuery = context.params.articleId;
-
-  // (c) Filters articles array to match & return article passed in params
-  const articleMatch = articles.filter(
-    (article) => article.id.toString() === articleQuery 
-  )
-
-  return {
-    props: {
-      article: articleMatch[0]
-    },
-  };
-};
 
 export default ArticleDetailPage;
