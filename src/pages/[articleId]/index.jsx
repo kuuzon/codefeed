@@ -27,7 +27,7 @@ function ArticleDetailPage(props) {
 // STATIC SITE GENERATION (snippet: "ngsp")
 export const getStaticProps = async ( context ) => {
   // (a) Fetches ENTIRE articles array from INTERNAL API
-  const response = await fetch(`${process.env.SERVER_NAME}/api/news`);
+  const response = await fetch(`${process.env.SERVER_NAME}/api/articles`);
   const articles = await response.json();
   console.log(articles)
 
@@ -36,7 +36,7 @@ export const getStaticProps = async ( context ) => {
 
   // (c) Filters articles array to match & return article passed in params
   const articleMatch = articles.filter(
-    (article) => article.id.toString() === articleQuery 
+    (article) => article._id.toString() === articleQuery 
   )
 
   return {
@@ -49,11 +49,11 @@ export const getStaticProps = async ( context ) => {
 // STATIC SITE DYNAMIC PATHS (snippet: "ngspa")
 export const getStaticPaths = async () => {
   // (a) Fetches ENTIRE articles array from INTERNAL API
-  const response = await fetch(`${process.env.SERVER_NAME}/api/news`);
+  const response = await fetch(`${process.env.SERVER_NAME}/api/articles`);
   const articles = await response.json();
 
   // (b) Pull ALL the ids out of the articles array ONLY
-  const idList = articles.map((article) => article.id);
+  const idList = articles.map((article) => article._id);
 
   // (c) Pre-build ALL the URL paths for all existing ids in array 
   const paths = idList.map((id) => (

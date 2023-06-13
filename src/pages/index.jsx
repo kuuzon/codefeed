@@ -28,7 +28,7 @@ function HomePage(props) {
 // STATIC SITE GENERATION (snippet: "ngsp")
 export const getStaticProps = async () => {
   // Fetch data from Internal API ("Code News")
-  const response = await fetch(`${process.env.SERVER_NAME}/api/news`);
+  const response = await fetch(`${process.env.SERVER_NAME}/api/articles`);
   const data = await response.json();
 
   // Returned data as props & ISR functionality
