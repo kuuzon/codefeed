@@ -67,6 +67,11 @@ export const getStaticProps = async () => {
   const data = await response.json();
   const articles = data.articles;
 
+  // FILTER TO REMOVE NULL ENTRIES
+  // Array with null properties -> array with full values
+  // [ -> null ]
+  // const filteredArray = articles.filter(article => )
+
   // ERROR HANDLING WITH SSG: https://nextjs.org/docs/pages/building-your-application/data-fetching/incremental-static-regeneration#error-handling-and-revalidation
   if(!response.ok){
     throw new Error(`Failed to fetch posts - Error ${response.status}: ${data.message}`)
