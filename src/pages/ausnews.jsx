@@ -63,7 +63,7 @@ function AusNewsPage({ ausArticles }) {
 // STATIC SITE GENERATION (snippet: "ngsp")
 export const getStaticProps = async () => {
   // External API Request: NewsAPI (ABC News AU)
-  const response = await fetch(`https://newsapi.org/v2/everything?sources=abc-news-au&sortBy=publishedAt&apiKey=${process.env.NEWS_API_KEY}&pageSize=100&page=1`);
+  const response = await fetch(`https://newsapi.org/v2/everything?sources=abc-news-au&sortBy=publishedAt&pageSize=100&page=1&apiKey=${process.env.NEWS_API_KEY}`);
   const data = await response.json();
   const articles = data.articles;
 
