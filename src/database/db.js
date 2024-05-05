@@ -22,22 +22,22 @@ export const articles = [
   },
   {
     id: 4,
-    title: "React 18 Launches",
-    description: "React 18 was released in March 2022. This release focuses on performance improvements and updating the rendering engine.  React 18 sets the foundation for concurrent rendering APIs that future React features will be built on top of.",
+    title: "React 19 Beta Launches",
+    description: "React 19 Beta introduces concurrent rendering by default, simplifies data fetching with Suspense, and offers React Server Components, improving client-server rendering integration for smoother user experiences and enhanced performance.",
     category: "React.js",
     image: "/articles/react-image.webp",
   },
   {
     id: 5,
-    title: "Next.js Version 12 Launches",
-    description: "Next 12 includes a faster Rust Compiler, introduction of middleware (beta), support for React 18, optimised images & SEO for ISR, and many other useful features!", 
+    title: "Next.js Version 14 Launches",
+    description: "Next.js 14 release introduces improved performance with Concurrent Mode and SSR streaming. Webpack 5 support enhances build speeds, and Image Component offers optimized image loading. Additionally, middleware support and enhanced Next.js Analytics provide better development insights.", 
     category: "Next.js",
     image: "/articles/coding-screen.webp",
   },
   {
     id: 6,
-    title: "Will Tech Stocks Rebound?",
-    description: "With Amazon.com Inc. down 33% this year and Meta Platforms Inc. tumbling over 40%, you might expect, or at least hope, the carnage in Big Tech is nearly over. You would probably be wrong, according to Dan Suzuki, deputy chief investment officer at Richard Bernstein Advisors.",
+    title: "US Tech Sector Faces Layoffs",
+    description: "Recent layoffs in the US tech sector, including Tesla cutting 10%, Discord laying off 17%, and Twitch slashing 35% of its workforce, reflect industry adjustments amid economic flux. Despite challenges, demand for remote work technologies persists, fostering continued innovation and adaptation.",
     category: "Industry",
     image: "/articles/market-bust.webp",
   }
