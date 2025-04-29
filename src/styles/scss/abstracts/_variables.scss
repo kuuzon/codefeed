@@ -1,4 +1,4 @@
-// VARIABLES
+  @use "sass:color";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
 
 // MAIN COLORS
@@ -27,7 +27,7 @@ $codle-font: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 // FUNCTIONS
 @function set-text-color($color){
-  @if(lightness($color) > 70) { 
+  @if(color.channel($color, "lightness", $space: hsl) > 70) { 
     @return $complementaryColor; 
   } @else {
     @return $primaryColor;
