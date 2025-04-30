@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build:scss": "sass --no-source-map src/styles/scss/main.scss:src/styles/globals.css"
+    "build:scss": "sass --no-source-map src/style/scss/main.scss:src/style/globals.css"
   },
   "dependencies": {
     "joi": "^17.13.3",

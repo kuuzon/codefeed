@@ -1,4 +1,4 @@
-import '@/styles/globals.css'
+import '@/style/globals.css'
 import Layout from '@/components/layout'
 import { Fragment, useEffect } from 'react'
 import Head from 'next/head'
