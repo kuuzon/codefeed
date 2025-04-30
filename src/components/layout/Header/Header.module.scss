@@ -1,3 +1,4 @@
+@use "sass:color";
 @use '@/styles/scss/abstracts/' as *;
 
 .header {
@@ -15,17 +16,15 @@
     font-size: 1.7rem;
     font-weight: 700;
     text-transform: lowercase;
-    color: $complementaryColor;
-  
-    .logoEnds {
-      color: $brandColor;
+    color: color.adjust($brandColor, $lightness: 10%);
+    &:hover {
+      color: color.adjust($brandColor, $lightness: 35%);
     }
-  
-    .logoMain {
+
+    .logoCore {
       color: $complementaryColor;
-  
       &:hover {
-        color: $brandSkewColor;
+        color: color.adjust($brandColor, $lightness: 35%);
       }
     }
   }
@@ -56,7 +55,7 @@
       }
   
       &:hover, &:active {
-        color: $complementaryColor;
+        color: color.adjust($brandColor, $lightness: 35%);
       }
     }
   }

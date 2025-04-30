@@ -1,3 +1,4 @@
+@use "sass:color";
 @use '@/styles/scss/abstracts' as *;
 
 .pageNav {
@@ -43,8 +44,8 @@
   @extend %pageBox;
 
   .pageLink {
-    @include setBackground($brandSkewColor);
-    border: solid $brandSkewColor 1px;
+    @include setBackground(color.adjust($brandColor, $lightness: 10%));
+    border: solid color.adjust($brandColor, $lightness: 10%) 1px;
 
     .pageLinkIcon, &:hover .pageLinkIcon {
       color: $complementaryColor;

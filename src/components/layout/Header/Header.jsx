@@ -8,9 +8,9 @@ function Header() {
     <header className={styles.header}>
       <div className={styles.brand}>
         <Link href='/'>
-          <span className={styles.logoEnds}>&lt; </span> 
-          <span className={styles.logoMain}>codefeed </span>
-          <span className={styles.logoEnds}>&#47;&gt;</span>
+          &lt;
+          <span className={styles.logoCore}>&nbsp;codefeed&nbsp;</span>
+          &#47;&gt;
         </Link>
       </div>
       <nav>
@@ -19,10 +19,10 @@ function Header() {
             <Link href='/'><span>Code</span>Feed</Link>
           </li>
           <li>
-            <Link href='/ausnews'><span>Aus</span>Feed</Link>
+            <Link href='/news/aus'><span>Aus</span>Feed</Link>
           </li>
           <li>
-            <Link href='/worldnews'><span>Globe</span>Feed</Link>
+            <Link href='/news/world'><span>Globe</span>Feed</Link>
           </li>
         </ul>
       </nav>
