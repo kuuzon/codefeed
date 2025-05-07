@@ -63,8 +63,8 @@ function TechNewsPage({ techArticles }) {
 
 export const getStaticProps = async () => {
   // External API Request: Tech Category
-  const response = await fetch(`https://newsapi.org/v2/top-headlines?category=technology&sortBy=publishedAt&pageSize=100&page=1&apiKey=${process.env.NEWS_API_KEY}`);
-  // const response = await fetch(`https://newsapi.org/v2/everything?sources=techcrunch,engadget,hacker-news,techradar,the-next-web,the-verge,wired&sortBy=publishedAt&pageSize=100&page=1&apiKey=${process.env.NEWS_API_KEY}`);
+  // const response = await fetch(`https://newsapi.org/v2/top-headlines?category=technology&sortBy=publishedAt&pageSize=100&page=1&apiKey=${process.env.NEWS_API_KEY}`);
+  const response = await fetch(`https://newsapi.org/v2/everything?sources=techcrunch,engadget,hacker-news,techradar,the-next-web,the-verge,wired&sortBy=publishedAt&pageSize=100&page=1&apiKey=${process.env.NEWS_API_KEY}`);
   const data = await response.json();
   const articles = data.articles;
   // console.log(articles);
