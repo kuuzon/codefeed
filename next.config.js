@@ -26,6 +26,14 @@ module.exports = (phase) => {
         protocol: 'https',
         hostname: '**.abc-cdn.net.au',
       },
+      {
+        protocol: 'https',
+        hostname: '**.**',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.**.**',
+      },
     ]
   }
 

@@ -19,6 +19,9 @@ function Header() {
             <Link href='/'><span>Code</span>Feed</Link>
           </li>
           <li>
+            <Link href='/news/tech'><span>Tech</span>Feed</Link>
+          </li>
+          <li>
             <Link href='/news/aus'><span>Aus</span>Feed</Link>
           </li>
           <li>
